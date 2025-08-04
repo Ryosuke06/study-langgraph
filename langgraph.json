@@ -1,0 +1,8 @@
+{
+  "dependencies": ["."],
+  "python_version": "3.13",
+  "graphs": {
+    "sample": "./main.py:graph"
+  },
+  "env": "./.env"
+}
