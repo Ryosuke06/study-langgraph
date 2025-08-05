@@ -9,7 +9,7 @@ from src.sample.utils.tools import tools
 # OpenAIのクライアント呼び出す。
 @lru_cache(maxsize=4)
 def _get_model():
-    model = ChatOpenAI(temperature=0, model="gpt-4o").bind_tools(tools)
+    model = ChatOpenAI(temperature=0, model="gpt-4o-mini").bind_tools(tools)
     return model
 
 
