@@ -1,12 +1,12 @@
 from typing import Literal
 from langgraph.graph import END, START, StateGraph
 from typing_extensions import TypedDict
-from src.sample.utils.nodes import (
+from src.utils.nodes import (
     call_model,
     should_continue,
     tool_node,
 )
-from src.sample.utils.state import AgentState
+from src.utils.state import AgentState
 
 # 超おまじないです。
 workflow = StateGraph(AgentState)
