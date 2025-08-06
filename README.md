@@ -21,14 +21,14 @@
 
 ```
 study-langgraph/
-├── main.py              # メインのワークフロー定義
-├── requirements.txt     # 依存パッケージリスト
+├── langgraph.json       # プロジェクト設定ファイル
+├── main.py             # メインのワークフロー定義
+├── requirements.txt    # 依存パッケージリスト
 └── src/
-    └── sample/
-        └── utils/
-            ├── nodes.py    # ノード定義（モデル呼び出し、ツール実行など）
-            ├── state.py    # 状態管理の定義
-            └── tools.py    # 使用可能なツールの定義
+    └── utils/
+        ├── nodes.py    # ノード定義（モデル呼び出し、ツール実行など）
+        ├── state.py    # 状態管理の定義
+        └── tools.py    # 使用可能なツールの定義
 ```
 
 ## セットアップ方法
@@ -54,11 +54,26 @@ pip install -r requirements.txt
 ```
 
 4. 環境変数の設定
-   `.env`ファイルを作成し、必要な環境変数を設定してください：
+   `.env`ファイルを作成し、以下の環境変数を設定してください：
 
 ```
-OPENAI_API_KEY=your_api_key_here
+# OpenAI API設定
+OPENAI_API_KEY=<your_api_key_here>
+
+# ログ設定
+LOG_LEVEL=INFO
+
+# LangSmith設定（オプション：デバッグやモニタリング用）
+LANGSMITH_API_KEY=<your_langsmith_api_key>
+LANGCHAIN_TRACING_V2=true
+LANGSMITH_ENDPOINT=https://api.smith.langchain.com
+LANGSMITH_PROJECT=study-langgraph
+
+# Google API設定（オプション：追加機能用）
+GOOGLE_API_KEY=<your_google_api_key>
+GOOGLE_CSE_ID=<your_google_cse_id>
 ```
+
 
 ## 使用方法
 
@@ -88,6 +103,6 @@ MIT ライセンス
 - OpenAI API キーが必要です
 - 実験的な実装を含む可能性があります
 
-
 ## 参考にしたもの（てか全くほぼ一緒）
+
 https://zenn.dev/dely_jp/articles/5034db4f729638
