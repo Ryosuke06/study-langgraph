@@ -55,6 +55,36 @@ pip install -r requirements.txt
 
 4. 環境変数の設定
    `.env`ファイルを作成し、以下の環境変数を設定してください：
+   一旦下のコードを.envに貼り付けてから作業した方がいいかも
+
+- **OpenAI API設定**
+https://openai.com
+上のリンクにアクセスして、アカウント作成をします。
+1.APIを選択
+2.左側のBillingを選択
+3.課金（このAgentのアプリはgpt-4o-miniでかなり費用抑えている1ドルあれば十分かな？）
+3.右のバーのAPI keysを選択してAPIキーの発行
+4.<your_api_key_here>を書き換える
+※人によっては、上の自分のアカウント名の隣にあるものをクリックして、その中にManage projectsというのがあるのでそれをクリックしたらBillingが出てくるかも
+
+-  **LangSmithに登録して、APIキーを発行**
+   https://smith.langchain.com/o/settings
+   1.上のリンクにアクセスして、アカウント作成をします。
+   2.左のバーのWorkspaceを選択
+   (人によっては、設定のところにAPI Key作成があるかも)
+   3.上のバーにAPI KeyがでてくるのでそこでAPIキーを発行
+   (この場合は、その場所でAPI Key作成)
+   4.下記の<your_langsmith_api_key>を書き換える
+
+- **Google Cloudで、「Custom Search API」**
+https://console.cloud.google.com/marketplace/product/google/customsearch.googleapis.com
+1.上のリンクにアクセス
+2.有効にするボタンをクリック
+3.https://programmablesearchengine.google.com/controlpanel/all にアクセス
+4.追加ボタンをクリック
+5.シンプルにCSE_IDという変数が欲しいだけなので、特別な設定はせず、脳死で作成
+6.作成したら、<your_google_api_key>と<your_google_cse_id>を書きかえる
+
 
 ```
 # OpenAI API設定
