@@ -107,11 +107,17 @@ GOOGLE_CSE_ID=<your_google_cse_id>
 
 ## 使用方法
 
-メインのワークフローを実行するには：
+ローカルでLangGraph Serverを動かす：
 
 ```bash
-python main.py
+langgraph dev
 ```
+
+LangSmithを使用して、ログを確認する：
+LangSmithにログインして
+study-langgraphというprojectがあると思うのでそれを選択
+（見つけられない時は、自分のアイコンをタッチして、Personalをクリックすると出てくる）
+そしたら詳細情報の画面に飛べます
 
 ## ワークフローの説明
 
